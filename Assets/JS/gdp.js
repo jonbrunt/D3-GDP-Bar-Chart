@@ -34,7 +34,7 @@ function main(dataSet) {
     .tickSize(5);
 
   const yAxis = d3.axisLeft(yScale)
-    .tickSize(10);
+    .tickSize(5);
 
   const svg = d3.select('#main')
     .append('svg')
@@ -81,7 +81,7 @@ function main(dataSet) {
     .classed('info', true)
     .style('font-size', '1.5em')
     .style('text-anchor', 'middle')
-    .text('Dollars (Billions)');
+    .text('US Dollars (Billions)');
 
   svg.append('text')
     .attr('x', width / 2)
