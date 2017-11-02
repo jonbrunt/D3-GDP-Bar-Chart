@@ -38,10 +38,12 @@ function main(dataSet) {
     .tickValues([1950, 1955, 1960, 1965, 1970, 1975, 1980, 1985, 1990, 1995,
       2000, 2005, 2010, 2015])
     .tickFormat(d3.format('d')) // used to prevent commas in numerical labels
-    .tickSize(5); // reduces tick size from default
+    .tickSize(5) // reduces tick size from default
+    .tickSizeOuter(0);
   // sets up y axis
   const yAxis = d3.axisLeft(yScale)
-    .tickSize(5); // reduces tick size from default
+    .tickSize(5) // reduces tick size from default
+    .tickSizeOuter(0);
   // appends svg with predetermined attributes to #main div
   const svg = d3.select('#main')
     .append('svg')
