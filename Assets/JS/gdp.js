@@ -8,7 +8,7 @@ function boxText(data) {
   let year = temp[0];
   // assigns quarter based on numerical month of data presentation
   if (temp[1] === '01') {
-    // reassigns year to previus year if info presented in Jan
+    // reassigns year to previous year if info presented in Jan
     quarter = '4th'; year = parseInt(year, 10) - 1;
   } else if (temp[1] === '04') {
     quarter = '1st';
@@ -25,7 +25,7 @@ function main(dataSet) {
   const barWidth = (width - (2 * padding)) / dataSet.length;
   // creates x scale based on start and end year of data
   const xScale = d3.scaleLinear()
-    // decimals used for precision of bar location verus ticks for years
+    // decimals used for precision of bar location versus ticks for years
     .domain([1946.75, 2015.5])
     .range([padding, width - padding]); // accounts for padding
   // creates y scale from 0 to 20,000 based on GDP in billions
@@ -57,7 +57,7 @@ function main(dataSet) {
     .data(dataSet)
     .enter()
     .append('rect')
-    // sets responsive x, y, etc based on standards for unspaced bar chart
+    // sets responsive x, y, etc based on standards for non-spaced bar chart
     .attr('x', (d, i) => padding + (i * barWidth))
     .attr('y', d => yScale(d[1]))
     .attr('width', barWidth)
