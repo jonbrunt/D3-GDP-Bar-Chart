@@ -111,7 +111,7 @@ function main(dataSet) {
     .style('font-size', '0.8em')
     .style('letter-spacing', '1px')
     .style('text-anchor', 'middle')
-    .text('Design & Development By Jonathan M. Brunt | 2017 | Data Courtesy of Federal Reserve Economic Data');
+    .text(`Design & Development By Jonathan M. Brunt | ${new Date().getFullYear()} | Data Courtesy of Federal Reserve Economic Data`);
 }
 // AJAX
 const makeRequest = async () => {
